@@ -1,5 +1,8 @@
 const router = require('express').Router()
 
-router.post('/', (req, res) => res.json({ success : true }))
+const UserController = require('./controllers/UserController')
+
+router.post('/create', UserController.create)
+router.post('/login', UserController.login)
 
 module.exports = router
